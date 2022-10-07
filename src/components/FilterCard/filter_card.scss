@@ -1,0 +1,232 @@
+.filter__card-container {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #0000007e;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .filter__card-content {
+    width: 900px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #373b74;
+    padding: 10px;
+    border-radius: 10px;
+
+    .title h1 {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 2.5rem;
+    }
+
+    .price {
+      margin-top: 20px;
+
+      h3 {
+        text-align: center;
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+
+      .range__container {
+        display: flex;
+        align-items: center;
+
+        p {
+          color: #fff;
+          font-size: 1.2rem;
+          font-weight: 300;
+        }
+
+        input {
+          appearance: none;
+          width: 400px;
+          height: 8px;
+          margin-top: 5px;
+          outline: none;
+          border-radius: 30px;
+          background-color: #fff;
+          margin: 0 10px;
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #ff7070 0.71%, #7876df 101.25%);
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .categories {
+      margin-top: 20px;
+
+      h3 {
+        text-align: center;
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 500px;
+        margin-top: 10px;
+
+        button {
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+          border: none;
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          font-weight: bold;
+          width: 150px;
+          padding: 3px 10px;
+          margin: 8px 0;
+          color: #fff;
+
+          &:hover {
+            background: #fff;
+          }
+
+          span {
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .farm.active{
+          background: #fff;
+          color: #0ccd1f;
+        }
+        .farm {
+          background: linear-gradient(95.76deg, #0ccd1f -5.14%, #086f12 91.33%);
+
+          &:hover {
+            color: #0ccd1f;
+          }
+        }
+        
+        .farm.active{
+          background: #fff;
+          color: #0ccd1f;
+        }
+///////////////////////////////////////////////
+        .miner {
+          background: linear-gradient(92.18deg, #2e70d2 0%, #144794 100%);
+
+          &:hover {
+            color: #2e70d2;
+          }
+        }
+        .miner.active{
+          background: #fff;
+          color: #2e70d2;
+        }
+///////////////////////////////////////////////
+        .tools {
+          background: linear-gradient(92.23deg, #685c5c 1.83%, #3d3a3a 100%);
+
+          &:hover {
+            color: #685c5c;
+          }
+        }
+        .tools.active{
+          background: #fff;
+          color: #685c5c;
+        }
+///////////////////////////////////////////////
+        .pvp {
+          background: linear-gradient(92.56deg, #f22323 0.37%, #7c1010 96.78%);
+
+          &:hover {
+            color: #f22323;
+          }
+        }
+        .pvp.active{
+          background: #fff;
+          color: #f22323;
+        }
+///////////////////////////////////////////////
+        .machi {
+          background: linear-gradient(92.05deg, #d8743c 0.38%, #d12f2f 95.17%);
+
+          &:hover {
+            color: #d8743c;
+          }
+        }
+        .machi.active{
+          background: #fff;
+          color: #d8743c;
+        }
+///////////////////////////////////////////////
+        .various {
+          background: linear-gradient(91.79deg, #9428d6 4.02%, #650e8e 103.23%);
+
+          &:hover {
+            color: #9428d6;
+          }
+          
+        }
+        .various.active{
+          background: #fff;
+          color: #9428d6;
+        }
+///////////////////////////////////////////////
+      }
+    }
+
+    button {
+      margin-top: 10px;
+      background: none;
+      border: 2px solid #ff7070;
+      color: #ff7070;
+      font-size: 1.1rem;
+      padding: 4px 12px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  
+  .filter__card-container .filter__card-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  
+  .filter__card-container .filter__card-content {
+
+    .price .range__container input {
+      width: 100%;
+    }
+
+    .categories .buttons {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-height: 540px) {
+  
+  .filter__card-container .filter__card-content {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}

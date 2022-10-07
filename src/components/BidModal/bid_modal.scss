@@ -1,0 +1,118 @@
+.bid__modal-container {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #0000007e;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bid__modal {
+    background: #373b74;
+    border-radius: 10px;
+    padding: 10px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .bid__modal-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .left img {
+        width: 180px;
+        border-right: 4px solid #fff;
+        padding-right: 40px;
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        padding-left: 40px;
+
+        input {
+          width: 250px;
+          outline: none;
+          border: none;
+          margin: 6px 0;
+          border-radius: 10px;
+          padding: 6px;
+        }
+        select {
+          width: 250px;
+          outline: none;
+          border: none;
+          margin: 6px 0;
+          border-radius: 10px;
+          padding: 6px;
+        }
+      }
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .cancel {
+        padding: 5px 14px;
+        font-size: 1rem;
+        background: none;
+        border: 1px solid #ff7070;
+        color: #ff7070;
+        border-radius: 7px;
+      }
+
+      .post_bid {
+        color: #fff;
+        background: #ff7070;
+        padding: 4px 15px;
+        font-weight: 700;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+    
+    .bid__modal-container .bid__modal .bid__modal-content {
+        flex-direction: column;
+        align-items: center;
+
+        .left img {
+            border: none;
+            width: 120px;
+            padding-right: 0;
+        }
+
+        .right {
+            padding-left: 0;
+        }
+    }
+}
+
+@media screen and (max-height: 400px) {
+  
+  .bid__modal-container .bid__modal {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}

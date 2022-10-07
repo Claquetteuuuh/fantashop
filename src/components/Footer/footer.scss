@@ -1,0 +1,138 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  background: linear-gradient(180deg, rgba(41, 44, 93, 0) 0%, #292c5d 13.02%);
+  padding: 20px;
+
+  img {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .footer__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
+
+    .title {
+      color: #c3bdbe;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .left {
+      .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 700;
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 0;
+            height: 4px;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            position: absolute;
+            transition: 0.4s ease-in-out;
+            border-radius: 1px;
+          }
+
+          &:hover::after {
+            width: 35%;
+            transition: 0.4s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      a {
+        border: none;
+        padding: 8px 20px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        display: flex;
+        width: 170px;
+        align-items: center;
+        text-decoration:none; 
+
+        span {
+          margin-left: 10px;
+        }
+      }
+
+      a:nth-child(1) {
+        background: #7481f2;
+        margin-bottom: 8px;
+      }
+
+      a:nth-child(2) {
+        background: linear-gradient(93.09deg, #d99b3f 2.58%, #d32a2a 97.39%);
+        margin-bottom: 8px;
+      }
+
+      a:nth-child(3) {
+        background: #55acee;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  footer .footer__content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  footer .footer__content {
+    grid-template-columns: 1fr;
+
+    .title {
+      text-align: center;
+    }
+
+    .left .links {
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .middle {
+      margin-bottom: 30px;
+    }
+
+    .right {
+      align-items: center;
+    }
+  }
+}

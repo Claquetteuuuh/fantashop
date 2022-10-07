@@ -1,0 +1,130 @@
+.recru {
+    padding: 40px;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.recru .content_recru {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.recru h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+
+.recru .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container .card {
+    background-color: #292C5D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    padding: 15px;
+    margin: 30px;
+}
+
+.container .card .left {
+    display: flex;
+    align-items: center;
+}
+
+.container .card .left img {
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.35));
+}
+
+.container .card .left h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.container .card a img {
+    margin-right: 15px;
+}
+
+.container .card a {
+    display: flex;
+    align-items: center;
+    background-color: #683EB7;
+    padding: 0 10px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.recru .ellipse {
+    position: absolute;
+    right: 0;
+    bottom: -90px;
+    width: 40%;
+    height: 850px;
+    z-index: -9999;
+}
+
+.recru .ellipse2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 850px;
+    z-index: -9999;
+}
+
+@media screen and (max-width: 1599px) {
+    
+    .recru {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    
+    .recru h1 {
+        font-size: 40px;
+    }
+
+    .recru .container .card {
+        flex-direction: column;
+    }
+
+    .container .card .left {
+        margin-bottom: 15px;
+    }
+
+    .container .card .left img {
+        width: 40px;
+    }
+
+    .container .card .left h3 {
+        font-size: 25px;
+    }
+
+    .container .card a img {
+        width: 15px;
+    }
+
+    .container .card a {
+        font-size: 16px;
+        height: 35px;
+    }
+}

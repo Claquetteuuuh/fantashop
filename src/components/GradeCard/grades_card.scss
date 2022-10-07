@@ -1,0 +1,51 @@
+.card__grade-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+   .grades {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #373b74;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+
+    h4 {
+      color: #ffff;
+      font-weight: 300;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+
+      .info__icon {
+        border: none;
+        color: #fff;
+        background-color: #ff7070;
+        padding: 0 8px;
+        font-size: 0.8rem;
+        border-radius: 7px;
+      }
+
+      .buy {
+        width: 90px;
+        border: none;
+        color: #fff;
+        background-color: #ff7070;
+        padding: 4px;
+        font-size: 1.1rem;
+        margin-left: 10px;
+        border-radius: 7px;
+      }
+    }
+  }
+}

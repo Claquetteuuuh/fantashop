@@ -1,0 +1,50 @@
+.mtn {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.mtn h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+.mtn_container {
+    color: #fff;
+}
+
+.mtn_container h3 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.mtn_container .paragraph {
+    width: 800px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 880px) {
+
+    .mtn {
+        height: 100%;
+    }
+
+    .mtn_content {
+        margin-top: 80px;
+    }
+
+    .mtn h1 {
+        font-size: 50px;
+    }
+
+    .mtn_container .paragraph {
+        width: 100%;
+    }
+}

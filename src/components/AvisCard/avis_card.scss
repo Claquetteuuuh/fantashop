@@ -1,0 +1,54 @@
+.card__avis-container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  border: 6px solid #ff7070;
+  border-radius: 10px;
+  background: #fff;
+
+  .header__card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #111445;
+    padding: 10px;
+
+    // img {
+    //   width: 60px;
+    //   border-radius: 50%;
+    //   border: 3px solid #7848ff;
+    //   margin-right: 15px;
+    // }
+
+    .rate__container img {
+      margin-right: 4px;
+    }
+
+    .title {
+      color: #fff;
+      flex-direction: column;
+
+      h2 {
+        font-weight: 600;
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-weight: 300;
+      }
+    }
+  }
+
+  .paragraph {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  
+  .card__avis-container .header__card .title {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.video-container {
+    height: 80vh;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    width: 70%;
+}
+
+@media screen and (max-width: 1500px) {
+        
+    .video-container {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    .video-container {
+        height: 100%;
+    }
+}

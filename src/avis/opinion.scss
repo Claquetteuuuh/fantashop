@@ -1,0 +1,126 @@
+.opinion__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 80px;
+  padding: 20px 5%;
+
+  .box__container {
+    height: 100%;
+    width: 1400px;
+    background: #373b74;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 48px 11px #ee2f2f;
+    box-shadow: 5px 5px 48px 11px #ee2f2f;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        display: flex;
+        align-items: center;
+
+        h1 {
+          color: #fff;
+          font-size: 2.1rem;
+          font-weight: 600;
+          border-right: 4px solid #fff;
+          padding-right: 10px;
+        }
+
+        img {
+          padding-left: 10px;
+          width: 180px;
+        }
+      }
+
+      .stars {
+        display: flex;
+        align-items: center;
+
+        .star {
+          margin-right: 10px;
+        }
+
+        p {
+          color: #C4C4C4;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .scroll {
+      margin: 40px 0;
+      height: 550px;
+      overflow-y: scroll;
+      .content{
+        flex-direction: column;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      background: #ff7070;
+      color: #fff;
+      padding: 6px;
+      width: 350px;
+      border-radius: 6px;
+
+      span {
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1470px) {
+  .opinion__container .box__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .opinion__container .box__container .header {
+    .title {
+      flex-direction: column;
+      align-items: flex-start;
+
+      h1 {
+        padding-right: 0;
+        border: none;
+      }
+
+      img {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .opinion__container .box__container {
+    .header {
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        align-items: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    button {
+        width: 100%;
+    }
+  }
+}
