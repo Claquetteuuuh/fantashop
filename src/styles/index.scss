@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 * {
   padding: 0;
@@ -18,4 +19,22 @@ body {
 
 button {
   cursor: pointer;
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #1f214c #080930;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #080930;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #1f214c;
+    border-radius: 10px;
 }

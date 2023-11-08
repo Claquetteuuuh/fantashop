@@ -12,7 +12,7 @@ const History = () => {
           <p>
             Le FantaShop a été créé le 13 avril 2020, au commencement c'était un
             serveur de giveaway et de reward avec plusieurs blocs de paladium à
-            gagner chaque jour. <br />
+            gagner chaque jour. <br /><br />
             Un jour, tthomasrh le fondateur, décida d'ouvrir un market et c'est
             les 15 avril 2020 que le shop ouvra, avec plein d'innovations dont
             le premier grade de réduction des shops de paladium (le market

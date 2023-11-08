@@ -1,0 +1,193 @@
+.container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.container h1{
+    position: relative;
+    color: white;
+    font-size: clamp(5rem, 6vw, 6rem);
+    margin: 0 0 50px 0;
+}
+.container h1::before{
+    margin-top: -5px;
+    content: '';
+    background-color: white;
+    height: 10px;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.content{
+    width: 90%;
+    display: flex;
+}
+.newsAndPagination{
+    width: 85%;
+}
+.newsList{
+    width: 100%;
+}
+.stats{
+    max-height: 2000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    right: -3%;
+}
+
+.trait{
+    background-color: white;
+    width: 20px;
+    height: 100%;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.statsList{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .6fr .6fr .6fr 2fr;
+    gap: 25px;
+}
+.statsList div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #292C5D;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 10px;
+}
+.statsList div:not(:last-child){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.statsList div:not(:last-child) p:nth-child(1){
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: clamp(50px, 6vw, 80px);
+    letter-spacing: 5px;
+    background: -webkit-linear-gradient(120deg, #9837f3,#fe9750);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.statsList div:not(:last-child) p:nth-child(2){
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: clamp(20px, 1.6vw, 25px);
+    color: white;
+
+}
+
+.statsList div:last-child{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.statsList div:last-child img{
+    height: 100%;
+}
+.phoneImg{
+    display: none;
+}
+
+.loadingNews{
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 50px;
+    animation: lightning 1s infinite;
+}
+
+@media screen and (max-width: 1200px) {
+    .newsAndPagination{
+        width: 95%;
+    }
+    .trait{
+        display: none;
+    }
+    .content{
+        width: 97%;
+    }
+    .newsList{
+        width: 100%;
+    }
+    .newsList{
+        margin-top: 50px;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .stats{
+        max-width: 80%;
+        right: 0;
+    }
+    .statsList{
+        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .statsList div{
+        padding: 3%;
+        text-align: center;
+    }
+    .statsList div:last-child{
+        display: none;
+    }
+    .statsList div:not(:last-child) p:nth-child(1) {
+        font-size: clamp(30px, 6vw, 80px);
+    }
+    .statsList div:not(:last-child) p:nth-child(2){
+        font-size: clamp(15px, 1.6vw, 25px);
+    } 
+    .phoneImg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .phoneImg img{
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .content{
+        width: 97%;
+    }
+    .newsList{
+        width: 100%;
+    }
+    .stats{
+        max-width: 90%;
+    }    
+    .statsList{
+        gap: 10px;
+    }
+}
+
+@keyframes lightning {
+    0%{
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+    }
+    50%{
+        box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.2);
+    }
+    100%{
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+    }
+}

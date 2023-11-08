@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import './footer.scss';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,14 +13,15 @@ const Footer = () => {
             <h4>Pages</h4>
           </div>
           <div className="links">
-            <a href="/">Home</a>
-            <a href="/boutique">Commander</a>
-            <a href="/profile">Profile</a>
-            <a href="/encheres">Enchère</a>
-            <a href="#" style={{ cursor: "not-allowed", color: "grey" }}>News</a>
-            <a href="/notre-histoire">Notre histoire</a>
-            <a href="/">Recrutements</a>
-            <a href="mentions-legales">Mentions legales</a>
+            <Link to="/">Home</Link>
+            <Link to="/boutique">Commander</Link>
+            <Link to="/profile">Profile</Link>
+            <Link to="/encheres">Enchère</Link>
+            <Link to="/news">News</Link>
+            <Link to="/countdown">Décompte</Link>
+            <Link to="/notre-histoire">Notre histoire</Link>
+            <Link to="/">Recrutements</Link>
+            <Link to="mentions-legales">Mentions legales</Link>
           </div>
         </div>
         <div className="middle">
@@ -30,6 +32,7 @@ const Footer = () => {
           <p>Saï</p>
           <p>berchbrown</p>
           <p>Paillettes_</p>
+          <p>ClaquetteuuuH</p>
         </div>
         <div className="right">
           <a href = "https://discord.gg/6RW7dMTU2d">

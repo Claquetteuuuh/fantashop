@@ -12,7 +12,7 @@ const CountdownContainer = ({objectif}) => {
     const [loading, setloading] = useState(true)
     const [discordCount, setdiscordCount] = useState(0)
 
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
     
     const getMember = () => {
         axios.get("https://api.fantashop.fr/discord/count")
@@ -39,6 +39,7 @@ const CountdownContainer = ({objectif}) => {
                 {(width > 680)? <img src="/images/countdown/Party-rectangle.svg" alt="party rectangle" /> : <img src="/images/countdown/Party-rectangle-phone.svg" alt="party rectangle for phone" />}
                 
                 {
+
                     (!loading)?
                         (ROAD_TO-discordCount > 0)?
                         <div className={styles.last}>
@@ -57,7 +58,7 @@ const CountdownContainer = ({objectif}) => {
             </div>
             {
                 (width < 1180)? 
-                <a target={"_blank"} href='https://discord.gg/UGutcWfxMW' className={styles.inviteContainer}>
+                <a target={"_blank"} rel="noreferrer" href='https://discord.gg/UGutcWfxMW' className={styles.inviteContainer}>
                     <div className={styles.leftInvite}><img src="/images/countdown/add-user.svg" alt="svg discord add member" /></div>
                     <div className={styles.rightInvite}><p>Inviter des gens</p></div>
                 </a>

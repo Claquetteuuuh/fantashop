@@ -17,8 +17,8 @@ const OnePage = () => {
         <main>
             <Home />
             <FantaSpace lastmaj={lastmaj} />
-            <a href="https://discord.gg/6RW7dMTU2d" style={{ display: "flex", justifyContent: "center" }}>
-                <img src="./images/background_giveaway.png" alt="" width="70%" />
+            <a href="https://discord.gg/SFzyyrSsRJ" style={{ display: "flex", justifyContent: "center" }}>
+                <img src="./images/gway.png" alt="giveaway event image" width="70%" />
             </a>
             <Recruitements />
         </main>

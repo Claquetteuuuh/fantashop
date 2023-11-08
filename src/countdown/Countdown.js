@@ -1,9 +1,9 @@
 import React from 'react';
 import CountdownContainer from '../components/CountdownContainer/CountdownContainer';
 
-const Countdown = () => {
+const Countdown = ({objectif}) => {
     return (
-        <CountdownContainer objectif={4100} />
+        <CountdownContainer objectif={objectif} />
         
     );
 };

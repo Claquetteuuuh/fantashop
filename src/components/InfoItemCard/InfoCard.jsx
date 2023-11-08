@@ -3,9 +3,9 @@ import "./info_card.scss";
 
 const InfoCard = ({ show, id }) => {
   const [item, setitem] = useState({});
-  function nice([...array]) {
-    return array.concat(array.splice(-2, 2).join(' and ')).join(', ');
-  } 
+  // function nice([...array]) {
+  //   return array.concat(array.splice(-2, 2).join(' and ')).join(', ');
+  // } 
   
   useEffect(() => {
     fetch("https://api.fantashop.fr/shop/item/" + id)

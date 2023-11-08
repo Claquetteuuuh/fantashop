@@ -2,6 +2,7 @@ import React, { useState ,useEffect} from "react";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { Icon } from "@iconify/react";
 import "./navbar.scss";
+import { Link } from "react-router-dom";
 
 // Images
 import logo from "../../assets/logo.png";
@@ -28,14 +29,15 @@ const Navbar = ({ accessToken }) => {
     if (user) {
       return (
         <div className="avatar">
-          <a href="/profile">
+          
+          <Link to="/profile">
             <img
               src={
                 "https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png"
               }
               alt="avatar"
             />
-          </a>
+          </Link>
         </div>
       );
     } else {
@@ -52,9 +54,9 @@ const Navbar = ({ accessToken }) => {
     <section className="header__container">
       <header>
         <div className="left">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="logo" />
-          </a>
+          </Link>
         </div>
         <div className="right">
           <IsLogged></IsLogged>
@@ -63,7 +65,7 @@ const Navbar = ({ accessToken }) => {
           </div>
         </div>
 
-        {showNav ? <div className="bg__menu"></div> : ""}
+        {showNav ? <div className="bg__menu" onClick={() => setShowNav(false)} ></div> : ""}
 
         <nav className={showNav ? "nav-menu active" : "nav-menu"}>
           <div className="top">
@@ -72,66 +74,79 @@ const Navbar = ({ accessToken }) => {
           </div>
           <ul>
             <li>
-              <a href="/" className="link" onClick={() => setShowNav(false)}>
+              <Link to="/" className="link" onClick={() => setShowNav(false)}>
                 <img src="./images/icons/home.png" alt="icone de maison" />
                 Accueil
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="link"
-                href="/boutique"
+                to="/boutique"
                 onClick={() => {
                   setShowNav(false);
                 }}
               >
                 <img src="./images/icons/cart.png" alt="icone de caddy" />
                 Boutique
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="link"
-                href="/encheres"
+                to="/encheres"
                 onClick={() => setShowNav(false)}
               >
                 <img src="./images/icons/bid.png" alt="icone d'enchère" />
                 Enchères
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/avis"
+              <Link
+                to="/avis"
                 className="link"
                 onClick={() => setShowNav(false)}
               >
                 <img src="./images/icons/star.png" alt="icone d'étoile" />
                 Avis
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="link"
-                href="/notre-histoire"
-                /* onClick={() => setShowNav(false)} */
+                to="/notre-histoire"
+                onClick={() => setShowNav(false)}
               >
                 <img src="./images/icons/book.png" alt="icone de livre" />
                 Notre Histoire
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="link"
-                href="#"
-                style={{ cursor: "not-allowed", color: "grey" }}
-                // onClick={() => setShowNav(false)}
+                to="/news"
+                onClick={() => setShowNav(false)}
               >
                 <img
                   src="./images/icons/newspaper.png"
                   alt="icone de journal"
                 />
                 News
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="link"
+                to="/countdown"
+                onClick={() => setShowNav(false)}
+              >
+                <img
+                  height={45}
+                  src="./images/icons/chronometer.png"
+                  alt="icone de journal"
+                />
+                Décompte
+              </Link>
             </li>
           </ul>
         </nav>

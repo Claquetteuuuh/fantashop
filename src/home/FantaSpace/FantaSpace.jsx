@@ -17,7 +17,7 @@ const FantaSpace = ({ lastmaj }) => {
   },[])
 
   return (
-    <section className="fanta__space">
+    <section id="fantaspace" className="fanta__space">
       <SmallTitle>FantaShop'Space</SmallTitle>
 
       <div className="container">
